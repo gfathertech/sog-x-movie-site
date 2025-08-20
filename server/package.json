@@ -1,0 +1,26 @@
+{
+      "name": "your-package",
+      "version": "1.0.0",
+      "type": "module",
+      "main": "index.js",
+      "scripts": {
+            "dev": "nodemon --exec ts-node src/index.ts"
+      },
+      "dependencies": {
+            "@fastify/cors": "^11.1.0",
+            "@fastify/formbody": "^8.0.2",
+            "axios": "^1.11.0",
+            "bcryptjs": "^3.0.2",
+            "cheerio": "^1.1.2",
+            "dotenv": "^17.2.1",
+            "express": "^5.1.0",
+            "fastify": "^5.5.0",
+            "hono": "^4.9.2",
+            "mongodb": "^6.18.0",
+            "mongoose": "^8.17.1",
+            "ts-node": "^10.9.2"
+      },
+      "devDependencies": {
+            "@types/node": "^24.3.0"
+      }
+}
