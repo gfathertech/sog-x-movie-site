@@ -10,7 +10,7 @@ const app = Fastify({logger:true});
 const PORT = Number (process.env.PORT);
 
 app.register(cors,{
-  "origin": `${process.env.URI}`
+  "origin": "*"
 })
 app.register(fastifyFormbody)
 

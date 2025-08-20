@@ -1,7 +1,11 @@
+import type { SetStateAction } from "react";
 import {FaSearch} from "react-icons/fa"
+type search = {
+  search:string;
+  setSearch: React.Dispatch<SetStateAction<string>>;
+}
 
-
-const Search = ({search, setSearch}) => {
+const Search: React.FC<search> = ({search, setSearch}) => {
   return (
   <>
     <div className="searchbar flex items-center">
