@@ -40,7 +40,7 @@ fetchMovies(search)
     <header className="px-4 py-3">
       {/* My logo insertion - responsive sizing */}
       <div className=''>
-        <img className='flex mt-3 ml-3 rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28'
+        <img className='flex mt-3 ml-3 rounded-full w-16 sm:w-20 md:w-24 lg:w-28'
         src="/logo.jpg" 
         alt="logo"
         />
