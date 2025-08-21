@@ -4,7 +4,6 @@ import axios from 'axios';
 import * as s from "../services"
 import MovieCard from '../components/MovieCard';
 
-
 const Home = () => {
   const [search, setSearch] = useState('');
   const [movies, setMovies] = useState<s.Movies[]>([]);
@@ -37,39 +36,54 @@ fetchMovies(search)
       playsInline 
       />
       <div className="fixed top-0 left-0 w-full h-full bg-black/70 -z-10"></div>
-    <header>
-  {/* My logo insertion */}
-    <div className=''>
-     <img className='flex mt-3 ml-3 rounded-full'
-     src="/logo.jpg" 
-     alt="logo"
-     width={100}
-      />
-    </div>
-    <div className='flex flex-col items-center justify-center'>
-      <img
-    src='/vite.svg'
-    className=''
-    />
-    <search/>
-     <h1 className=' text-green-600 text-3xl font-bold mt-3'>Stream 1000+ 
-      <span className='bg-gradient-to-r from-green-500 to-blue-400
-     bg-clip-text text-transparent'>Movies</span> Nonstop</h1>
-    </div>
-    <div className='flex items-center justify-center'>
-     <Search search={search} setSearch={setSearch}/>
-    </div>
+    
+    <header className="px-4 py-3">
+      {/* My logo insertion - responsive sizing */}
+      <div className=''>
+        <img className='flex mt-3 ml-3 rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28'
+        src="/logo.jpg" 
+        alt="logo"
+        />
+      </div>
+      
+      <div className='flex flex-col items-center justify-center mt-4'>
+        <img
+        src='/vite.svg'
+        className=''
+        />
+        <search/>
+        
+        {/* Fixed text wrapping and responsive font sizes */}
+        <h1 className='text-green-600 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-3 text-center px-4'>
+          <span className="whitespace-nowrap">Stream 1000+</span>{' '}
+          <span className='bg-gradient-to-r from-green-500 to-blue-400 bg-clip-text text-transparent whitespace-nowrap'>
+            Movies
+          </span>{' '}
+          <span className="whitespace-nowrap">Nonstop</span>
+        </h1>
+      </div>
+      
+      <div className='flex items-center justify-center mt-6'>
+        <Search search={search} setSearch={setSearch}/>
+      </div>
     </header>
-        <h1>{search}</h1>
-    <section className='p-8'>
-      <h2 className='text-2xl font-bold mb-6 text-center'>All Movies</h2>
-      {loading ? ( <div className="text-purple-600">Loading.....</div>) : err ? (
-         <div className='text-red-500'>{err}</div>): 
-      (<ul className='flex flex-wrap gap-4 justify-center overflow-y-auto'>
-        {Array.isArray(movies) && movies.map(movie => (
-          <MovieCard key={movie.id} movie={movie} />
-        ))}
-      </ul>)}
+    
+    <h1 className="text-center text-white">{search}</h1>
+    
+    <section className='p-4 sm:p-6 md:p-8'>
+      <h2 className='text-xl sm:text-2xl font-bold mb-6 text-center text-white'>All Movies</h2>
+      {loading ? ( 
+        <div className="text-purple-600 text-center">Loading.....</div>
+      ) : err ? (
+        <div className='text-red-500 text-center'>{err}</div>
+      ) : (
+        {/* Responsive grid layout for movies */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-items-center'>
+          {Array.isArray(movies) && movies.map(movie => (
+            <MovieCard key={movie.id} movie={movie} />
+          ))}
+        </div>
+      )}
     </section>
     </div>
   )
