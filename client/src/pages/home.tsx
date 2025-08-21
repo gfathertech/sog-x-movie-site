@@ -67,9 +67,9 @@ const Home = () => {
       <section className="text-center px-4 mt-4 mb-8">
         <div className="flex flex-col items-center">
           <img
-            src='/vite.svg'
+            src='/seo.jpg'
             className='w-12 h-12 mb-4'
-            alt="Vite logo"
+            alt="logo"
           />
           <h1 className='text-green-600 text-2xl sm:text-3xl md:text-4xl font-bold'>
             Stream 1000+{' '}
