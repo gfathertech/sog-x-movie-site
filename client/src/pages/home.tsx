@@ -48,10 +48,9 @@ fetchMovies(search)
       
       <div className='flex flex-col items-center justify-center mt-4'>
         <img
-        src='/vite.svg'
+        src='/seo.jpg'
         className=''
         />
-        <search/>
         
         {/* Fixed text wrapping and responsive font sizes */}
         <h1 className='text-green-600 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mt-3 text-center px-4'>
@@ -61,6 +60,7 @@ fetchMovies(search)
           </span>{' '}
           <span className="whitespace-nowrap">Nonstop</span>
         </h1>
+          <search/>
       </div>
       
       <div className='flex items-center justify-center mt-6'>
