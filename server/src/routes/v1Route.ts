@@ -1,6 +1,6 @@
 import Fastify from 'fastify';
 import dotenv from "dotenv";
-import { getMovies, searchMovies, getMoviesById, getTrailers } from '../storage/movies.ts';
+import { getMovies, searchMovies, getMoviesById, getTrailers } from '../storage/movies.js';
 import { json } from 'stream/consumers';
 import axios from 'axios';
 dotenv.config()
