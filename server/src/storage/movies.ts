@@ -1,7 +1,7 @@
 import axios from "axios";
 import dotenv from "dotenv";
 dotenv.config()
-import type { MovieResponse, Movies } from "../models/moviesModel.ts";
+import type { MovieResponse, Movies } from "../models/moviesModel.js";
 
 const tmdbApiKey = process.env.TMDB_API;
         if (!tmdbApiKey) {
