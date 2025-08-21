@@ -2,7 +2,7 @@ import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import fastifyFormbody from '@fastify/formbody';
 import dotenv from 'dotenv';
-import { apiRoute } from './routes/v1Route.ts';
+import { apiRoute } from './routes/v1Route.js';
 
 dotenv.config();
 
