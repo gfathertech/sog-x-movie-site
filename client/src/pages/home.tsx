@@ -46,10 +46,10 @@ fetchMovies(search)
         />
       </div>
       
-      <div className='flex flex-col items-center justify-center w-20 mt-4'>
+      <div className='flex flex-col items-center justify-center mt-4'>
         <img
         src='/seo.jpg'
-        className=''
+        className='w-20'
         />
         
         {/* Fixed text wrapping and responsive font sizes */}
