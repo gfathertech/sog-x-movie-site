@@ -12,7 +12,7 @@ const MovieCard:React.FC<{movie: s.Movies}>  = ({movie}) => {
   };
 
   return (
-    <div className='movie-card w-full max-w-48 space-y-1 justify-center items-center'>
+    <div className='movie-card w-full space-y-1 justify-center items-center'>
       <img 
        src={movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` :
       '/no-poster.jpg'}
