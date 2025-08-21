@@ -77,7 +77,6 @@ fetchMovies(search)
       ) : err ? (
         <div className='text-red-500 text-center'>{err}</div>
       ) : (
-        {/* Responsive grid layout for movies */}
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-items-center'>
           {Array.isArray(movies) && movies.map(movie => (
             <MovieCard key={movie.id} movie={movie} />
