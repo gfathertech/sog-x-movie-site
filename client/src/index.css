@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components { 
+.movie-card{
+  @apply bg-blue-950 p-3 mt-2 rounded-2xl shadow-inner shadow-light-100 font-bold;
+
+  & img {
+  @apply rounded-lg h-auto w-full
+}
+
+  & h3 {
+    @apply text-white font-bold text-base line-clamp-1;
+}
+ & .content {
+  @apply mt-2 flex flex-row items-center flex-wrap gap-2;
+ }
+ & BsDot {
+  @apply font-extrabold
+ }
+ 
+}
+
+}
+
+.searchbar {
+  margin-top: 2.25rem;
+  background-color: black;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  max-width: fit-content;
+  border-radius: 8px;
+}
+.searchbar_input {
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+}
+.searchbar_icon {
+ color: #5dc282;
+}
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} 
+
